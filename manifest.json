@@ -1,0 +1,79 @@
+{
+    "name": "DarkEtsy",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Make Etsy Dark",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.etsy.com/*"
+            ],
+            "js": [
+                "scripts/jquery.js",
+                "scripts/content_script.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": ["scripts/eventPage.js"],
+        "persistent": false
+    },
+    "browser_action": {
+          "default_icon": {                    // optional
+            "19": "data/DarkEtsy-logo.png",           // optional
+            "38": "data/DarkEtsy-logo.png",
+            "128": "data/DarkEtsy-logo.png"            // optional
+          },
+          "default_title": "Dark Etsy"      // optional; shown in tooltip
+    },
+    "content_security_policy": "script-src 'self' http://localhost; object-src 'self' http://localhost",
+    "incognito": "split",
+    "offline_enabled": false,
+    "permissions": [
+        "tabs",
+        "https://www.etsy.com/*"
+    ],
+    "update_url": "http://path/to/updateInfo.xml",
+    "web_accessible_resources": [
+        "manifest.json",
+        "data/DarkEtsy-logo.png", 
+        "data/drugs.jpg",
+        "data/passport.gif",
+        "data/passportsLarge.jpg",
+        "data/ak47.jpg",
+        "data/handGuns.png",
+        "data/id.gif",
+        "data/warning.png",
+        "data/weedImage.png",
+        "data/scorpianBricks.jpg",
+        "data/gunsLarge.jpg",
+        "data/cocaineThumb.png",
+        "data/warning570.png",
+        "data/weedImage570.png",
+        "data/handGuns570.png",
+        "data/id570.png",
+        "data/ak47570.png",
+        "data/cocaineThumb570.png",
+        "data/DarkEtsy-logo.svg",
+        "data/belgpassport.png",
+        "data/belgpassport570.png",
+        "data/DL.png",
+        "data/DL570.png",
+        "data/euro.png",
+        "data/euro570.png",
+        "data/finnishPassport.png",
+        "data/finnishPassport570.png",
+        "data/passports.png",
+        "data/passports570.png",
+        "data/paypal.png",
+        "data/paypal570.png",
+        "data/seizure.png",
+        "data/seizure570.png",
+        "data/rifle.png",
+        "data/rifle570.png",
+        "data/handGun.png",
+        "data/handGun570.png",
+        "data/gun2.png",
+        "data/gun2570.png"
+    ]
+}
